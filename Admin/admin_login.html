@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="wrapper">
+  <div class="content">
+    <header>
+      <h1>Welcome Admin</h1>
+    </header>
+    <section>
+      <form name="log" action="index.html" class="login-form" onsubmit="return valform()">
+       
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" name="pass">
+        </div>
+        <div class="input-group"><button>Login</button></div>
+      </form>
+    </section>
+  </div>
+</section>
+<!-- partial -->
+  <script>
+  function valform()
+  {
+  var p= document.forms["log"]["pass"].value;
+  if(p=="admin123")
+  {
+  return true;
+  }
+  else
+  {
+  return false;
+  }
+  }
+  </script>
+</body>
+</html>
