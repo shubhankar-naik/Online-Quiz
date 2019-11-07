@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="login.css">
+<script>
+  function valform()
+  {
+  var p= document.forms["signup"]["pass"].value;
+  var p1= document.forms["signup"]["pass1"].value;
+  if(p==p1)
+  {
+  return true;
+  }
+  else
+  {
+  alert("Password doesn't Match");
+  return false;
+  }
+  }
+  </script>
+</head>
+<body>
+<div class="cont">
+<form action="sign_in.jsp" method="POST">
+  <div class="form sign-in">
+    <h2>Welcome back,</h2>
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" required/>
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" name="pass" required/>
+    </label>
+    <button type="submit" class="submit">Sign In</button>
+  </div>
+  </form>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+	  <script src="login.js"> </script>
+    </div>
+	<form name="signup" action="sign_up.jsp" onsubmit="return valform()" method="POST">
+    <div class="form sign-up">
+      <h2>Register Here,</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" required/>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required/>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="pass" required/>
+      </label>
+	  <label>
+        <span>Re-enter Password</span>
+        <input type="password" name="pass1" required/>
+      </label>
+      <button type="submit" class="submit">Sign Up</button>
+    </div>
+	</form>
+  </div>
+</div>
+
+
+</body>
+</html>
